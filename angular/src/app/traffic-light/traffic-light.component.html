@@ -1,0 +1,27 @@
+<div id="traffic-light">
+  <div
+    (select)="colorChecked($color1)"
+    [ngClass]="{
+      'color1-selected': color1Selected,
+      'color1-blink': color1Blink
+    }"
+    class="traffic-light-color"
+    id="color1"
+  ></div>
+  <div
+    class="traffic-light-color"
+    [ngClass]="{
+      'color2-selected': color2Selected,
+      'color2-blink': color2Blink
+    }"
+    id="color2"
+  ></div>
+  <div
+    class="traffic-light-color"
+    [ngClass]="{
+      'color3-selected': color3Selected,
+      'color3-blink': color3Blink
+    }"
+    id="color3"
+  ></div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container" *ngIf="data">
+  <div class="title">
+    <div class="logos">
+      <img src="../assets/cocacola_logo.png" alt="CocaCola European Partners" />
+      <img src="../assets/capgemini_logo2.png" alt="Capgemini" />
+    </div>
+    <h1>Score</h1>
+    <h1 class="bootstrap">Bootstrap</h1>
+  </div>
+  <div class="charts">
+    <div class="traffic-light-container">
+      <app-traffic-light
+        [lightState]="data[0].status"
+        [lightBlink]="data[0].status_blink"
+      ></app-traffic-light>
+    </div>
+    <app-bar-chart [data]="data"></app-bar-chart>
+    <!-- <app-bar-chart-alt [data]="data"></app-bar-chart-alt> -->
+    <div class="traffic-light-container">
+      <app-traffic-light
+        [lightState]="data[1].status"
+        [lightBlink]="data[1].status_blink"
+      ></app-traffic-light>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

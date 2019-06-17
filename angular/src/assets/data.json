@@ -1,0 +1,16 @@
+[
+  {
+    "team_name": "Blue",
+    "points": 15,
+    "color": "rgba(54, 162, 235, 0.2)",
+    "status": "green",
+    "status_blink": false
+  },
+  {
+    "team_name": "Red",
+    "points": 100,
+    "color": "rgba(255, 99, 132, 0.2)",
+    "status": "yellow",
+    "status_blink": false
+  }
+]
