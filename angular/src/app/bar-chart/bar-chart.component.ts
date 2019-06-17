@@ -104,7 +104,13 @@ export class BarChartComponent implements OnChanges {
       .append('text')
       .attr('class', 'value')
       .attr('x', (a) => x(a.team_name) + x.bandwidth() / 2)
-      .attr('y', (a) => y(a.points) + 20)
+      .attr('y', (a) => {
+        if (a.points === 0) {
+          return y(a.points) - 20;
+        } else {
+          return y(a.points) + 20;
+        }
+      })
       .attr('text-anchor', 'middle')
       .text((a) => `${a.points}`);
   }
