@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       function() {
         this.showData();
       }.bind(this),
-      50000,
+      500,
     );
   }
 
