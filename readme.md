@@ -14,7 +14,9 @@ Enter in node folder
 Enter in node folder an run 
 `npm start`
 Enter in Angular folder and run
-`npm start`
+`ng serve -o`
+To connect to the client enter in 
+`http://localhost:4200/`
 
 ## Editing charts values
 
