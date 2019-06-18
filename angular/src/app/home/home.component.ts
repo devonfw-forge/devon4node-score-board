@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataModel } from '../data/data.model';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   private intervalUpdate: any = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly shared: SharedService) {}
 
   ngOnInit() {
     this.showData();
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   private showData(): void {
-    this.getFromAPI().subscribe(
+    this.shared.getFromAPI().subscribe(
       (response) => {
         if (response.error === false) {
           this.data = response.data;
@@ -44,9 +45,9 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  private getFromAPI(): Observable<any> {
-    return this.http.get('http://localhost:3000', {
-      responseType: 'json',
-    });
-  }
+  // private getFromAPI(): Observable<any> {
+  //   return this.http.get('http://localhost:3000', {
+  //     responseType: 'json',
+  //   });
+  // }
 }

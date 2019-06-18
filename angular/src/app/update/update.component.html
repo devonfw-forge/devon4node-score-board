@@ -1,3 +1,125 @@
-<p>
-  update works!
-</p>
+<div class="container" *ngIf="model">
+  <h1>Update teams</h1>
+  <form (ngSubmit)="onSubmit()" #updateForm="ngForm">
+    <div class="teams">
+      <div class="team1">
+        <h1>Team 1</h1>
+
+        <div class="form-group">
+          <label for="team1_team_name">Team Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="team1_team_name"
+            required
+            [(ngModel)]="model[0].team_name"
+            name="team1_team_name"
+            #team1_team_name="ngModel"
+          />
+          <div
+            [hidden]="team1_team_name.valid || team1_team_name.pristine"
+            class="alert alert-danger"
+          >
+            Name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="team1_points">Team points</label>
+          <input
+            type="number"
+            class="form-control"
+            id="team1_points"
+            [(ngModel)]="model[0].points"
+            name="team1_points"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="team1_status">Traffic light status</label>
+          <select
+            class="form-control"
+            id="team1_status"
+            required
+            [(ngModel)]="model[0].status"
+            name="team1_status"
+            #team1_status="ngModel"
+          >
+            <option
+              *ngFor="let color_status of colors"
+              [value]="color_status"
+              >{{ color_status }}</option
+            >
+          </select>
+          <div
+            [hidden]="team1_status.valid || team1_status.pristine"
+            class="alert alert-danger"
+          >
+            Status color is required
+          </div>
+        </div>
+      </div>
+      <div class="team2">
+        <h1>Team 2</h1>
+
+        <div class="form-group">
+          <label for="team2_team_name">Team Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="team2_team_name"
+            required
+            [(ngModel)]="model[1].team_name"
+            name="team2_team_name"
+            #team2_team_name="ngModel"
+          />
+          <div
+            [hidden]="team2_team_name.valid || team2_team_name.pristine"
+            class="alert alert-danger"
+          >
+            Name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="team2_points">Team points</label>
+          <input
+            type="number"
+            class="form-control"
+            id="team2_points"
+            [(ngModel)]="model[1].points"
+            name="team2_points"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="team2_status">Traffic light status</label>
+          <select
+            class="form-control"
+            id="team2_status"
+            required
+            [(ngModel)]="model[1].status"
+            name="team2_status"
+            #team2_status="ngModel"
+          >
+            <option
+              *ngFor="let color_status of colors"
+              [value]="color_status"
+              >{{ color_status }}</option
+            >
+          </select>
+          <div
+            [hidden]="team2_status.valid || team2_status.pristine"
+            class="alert alert-danger"
+          >
+            Status color is required
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">
+      Submit
+    </button>
+    <button routerLink="/home">Go Home</button>
+  </form>
+</div>
