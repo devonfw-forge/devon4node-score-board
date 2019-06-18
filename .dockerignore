@@ -1,0 +1,7 @@
+angular/node_modules
+angular/.git
+angular/.gitignore
+
+node/node_modules
+node/.git
+node/.gitignore

@@ -1,0 +1,29 @@
+version: '3'
+
+services: 
+  node:
+    build: 'node/'
+    container_name: 'score_board_node'
+    image: node
+    ports:
+    - "3000:3000"
+    expose: 
+      - 3000
+    networks:
+      - score-board
+
+  angular:
+    build: 'angular/'
+    container_name: 'score_board_angular'
+    restart: always
+    image: score-board/angular
+    ports:
+    - "4200:4200"
+    expose:
+    - 4200
+    networks:
+      - score-board
+
+networks:
+  score-board:
+    driver: bridge

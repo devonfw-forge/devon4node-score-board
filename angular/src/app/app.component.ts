@@ -45,6 +45,8 @@ export class AppComponent implements OnInit {
   }
 
   private getFromAPI(): Observable<any> {
-    return this.http.get('http://localhost:3000', { responseType: 'json' });
+    return this.http.get('http://localhost:3000', {
+      responseType: 'json',
+    });
   }
 }

@@ -1,8 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const bodyParser = require('body-parser');
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', function(req, res) {
@@ -17,6 +20,26 @@ app.get('/', function(req, res) {
       code: 200,
       error: false,
     });
+  });
+});
+
+app.post('/update', function(req, res) {
+  fs.writeFile('./data.json', JSON.stringify(req.body), (err) => {
+    if (err) {
+      console.log('Error writing file', err);
+      res.send({
+        data: err,
+        code: 500,
+        error: true,
+      });
+    } else {
+      console.log('Successfully updated file');
+      res.send({
+        data: 'ok',
+        code: 200,
+        error: false,
+      });
+    }
   });
 });
 
