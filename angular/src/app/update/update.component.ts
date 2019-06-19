@@ -32,6 +32,12 @@ export class UpdateComponent implements OnInit {
 
   onSubmit() {
     console.log(this.model);
+    if (this.model[0].points < 0) {
+      this.model[0].points = 0;
+    }
+    if (this.model[1].points < 0) {
+      this.model[1].points = 0;
+    }
     this.shared.updateToAPI(this.model).subscribe(
       (response) => {
         if (response.error === false) {

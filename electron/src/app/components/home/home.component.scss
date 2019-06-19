@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 10px 0 10px;
+    .logos {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      img {
+        width: 117px;
+      }
+    }
+  }
+
+  h1 {
+    height: 10vh;
+    text-align: center;
+  }
+  .charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    app-bar-chart {
+      display: flex;
+      height: 80vh;
+      width: 70%;
+    }
+ 
+    app-traffic-light {
+      display: flex;
+    }
+  }
+
+  .traffic-light-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+// .container {
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   background: url(../../../assets/background.jpg) no-repeat center fixed;
+//   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+//   background-size: cover; /* version standardisée */
+
+//   .title {
+//     color: white;
+//     margin: 0;
+//     padding: 50px 20px;
+//   }
+// }

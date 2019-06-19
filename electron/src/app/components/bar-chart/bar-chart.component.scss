@@ -1,0 +1,19 @@
+app-bar-chart {
+  #chart {
+    height: inherit;
+    width: 100%;
+
+    .axis--x path {
+      display: none;
+    }
+  }
+  // background-color: #c5cae9;
+
+  text {
+    font-size: 20px;
+    &.value {
+      font-weight: bold;
+      font-size: initial;
+    }
+  }
+}

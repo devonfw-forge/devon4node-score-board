@@ -28,6 +28,7 @@
           <label for="team1_points">Team points</label>
           <input
             type="number"
+            min="0"
             class="form-control"
             id="team1_points"
             [(ngModel)]="model[0].points"
@@ -85,6 +86,7 @@
           <label for="team2_points">Team points</label>
           <input
             type="number"
+            min="0"
             class="form-control"
             id="team2_points"
             [(ngModel)]="model[1].points"
