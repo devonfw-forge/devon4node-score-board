@@ -1,16 +1,1 @@
-[
-  {
-    "team_name": "Blue",
-    "points": 0,
-    "color": "rgba(54, 162, 235, 0.5)",
-    "status": "green",
-    "status_blink": false
-  },
-  {
-    "team_name": "Red",
-    "points": 0,
-    "color": "rgba(237, 41, 57, 0.5)",
-    "status": "green",
-    "status_blink": false
-  }
-]
+[{"team_name":"Blue","points":0,"color":"rgba(54, 162, 235, 0.5)","status":"green","status_blink":false},{"team_name":"Red","points":5,"color":"rgba(237, 41, 57, 0.5)","status":"green","status_blink":false}]

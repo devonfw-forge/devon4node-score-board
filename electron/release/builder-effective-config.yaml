@@ -1,0 +1,36 @@
+directories:
+  output: release/
+  buildResources: build
+productName: Score Board
+files:
+  - filter:
+      - '**/*'
+      - '!**/*.ts'
+      - '!*.code-workspace'
+      - '!LICENSE.md'
+      - '!package.json'
+      - '!package-lock.json'
+      - '!src/'
+      - '!e2e/'
+      - '!hooks/'
+      - '!angular.json'
+      - '!_config.yml'
+      - '!karma.conf.js'
+      - '!tsconfig.json'
+      - '!tslint.json'
+extraFiles:
+  - filter:
+      - data.json
+win:
+  icon: dist
+  target:
+    - portable
+mac:
+  icon: dist
+  target:
+    - dmg
+linux:
+  icon: dist
+  target:
+    - AppImage
+electronVersion: 5.0.2
