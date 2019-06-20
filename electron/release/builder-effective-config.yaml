@@ -1,7 +1,7 @@
 directories:
   output: release/
   buildResources: build
-productName: Score Board
+productName: score-board
 files:
   - filter:
       - '**/*'

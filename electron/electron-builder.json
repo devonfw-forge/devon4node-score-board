@@ -1,5 +1,5 @@
 {
-  "productName": "Score Board",
+  "productName": "score-board",
   "directories": {
     "output": "release/"
   },
